@@ -12,6 +12,8 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 const teamMembers = []; //answer stored
+
+//will promt the questions and store the answers in teamMembers
 function promptManager() {
   inquirer
     .prompt([
@@ -42,7 +44,7 @@ function promptManager() {
       teamMembers.push(manager);
       promptMenu();
     });
-}
+} //will promt the questions and store the answers in teamMembers
 function promptEngineer() {
   inquirer
     .prompt([
@@ -74,6 +76,7 @@ function promptEngineer() {
       promptMenu();
     });
 }
+//will promt the questions and store the answers in teamMembers
 function promptIntern() {
   inquirer
     .prompt([
@@ -103,5 +106,30 @@ function promptIntern() {
       );
       teamMembers.push(intern);
       promptMenu();
+    });
+}
+//function for giving the use choice what to chose for adding
+function promptMenu() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "menu",
+        message: "What would you like to do next?",
+        choices: [
+          "Add an engineer",
+          "Add an intern",
+          "Finish building the team",
+        ],
+      },
+    ])
+    .then((answers) => {
+      if (answers.menu === "Add an engineer") {
+        promptEngineer();
+      } else if (answers.menu === "Add an intern") {
+        promptIntern();
+      } else {
+        generateHTML();
+      }
     });
 }

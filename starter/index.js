@@ -12,4 +12,19 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 const teamMembers = [];
-function promptManager() {}
+function promptManager() {
+    inquirer.prompt([
+        {type:"input" ,
+        name: "name",
+    message: "Provide us with manager's name:",},
+    {type: ,
+        name: ,
+    message: ,},
+    {type: ,
+        name: ,
+    message: ,},
+    {type: ,
+        name: ,
+    message: ,},
+    ])
+}

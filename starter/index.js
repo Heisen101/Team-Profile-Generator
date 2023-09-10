@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
-const teamMembers = []; //answer storred
+const teamMembers = []; //answer stored
 function promptManager() {
   inquirer
     .prompt([
@@ -40,7 +40,7 @@ function promptManager() {
         answers.officeNumber
       );
       teamMembers.push(manager);
-      promptMenu(); //is already function build in inqurer library  and we are calling it to display chaises to he user
+      promptMenu();
     });
 }
 function promptEngineer() {
@@ -71,7 +71,7 @@ function promptEngineer() {
         answers.github
       );
       teamMembers.push(engineer);
-      promptMenu(); //is already function build in inqurer library  and we are calling it to display chaises to he user
+      promptMenu();
     });
 }
 function promptIntern() {
@@ -102,6 +102,6 @@ function promptIntern() {
         answers.github
       );
       teamMembers.push(intern);
-      promptMenu(); //is already function build in inqurer library  and we are calling it to display chaises to he user
+      promptMenu();
     });
 }

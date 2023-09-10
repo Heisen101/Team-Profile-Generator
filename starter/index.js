@@ -74,3 +74,34 @@ function promptEngineer() {
       promptMenu(); //is already function build in inqurer library  and we are calling it to display chaises to he user
     });
 }
+function promptIntern() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Provide us with intern's name:",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Provide us with intern's emploee ID, please:",
+      },
+      { type: "input", name: "email", message: "Enter the intern's email: " },
+      {
+        type: "input",
+        name: "school",
+        message: "Enter the inter's school::",
+      },
+    ])
+    .then((answers) => {
+      const intern = new Intern(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.github
+      );
+      teamMembers.push(intern);
+      promptMenu(); //is already function build in inqurer library  and we are calling it to display chaises to he user
+    });
+}

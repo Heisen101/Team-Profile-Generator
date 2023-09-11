@@ -50,6 +50,7 @@ The Team Profile Generator is a command-line application that helps you create a
 ![Screenshot](./assets/third.png)
 
 4. The application will generate an HTML file in the `output` directory, which you can open in your web browser to view the team profile.
+
    ![Screenshot](./assets/fifth.png)
 
 ## Screenshots

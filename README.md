@@ -41,6 +41,8 @@ The Team Profile Generator is a command-line application that helps you create a
    node index.js
    ```
 
+   [Youtube video](https://www.youtube.com/watch?v=EPtyb9WoF3Q&ab_channel=V.OHFT)
+
    ![Screenshot](./assets/second.png)
 
 2. Follow the prompts to enter information about your team members, including managers, engineers, and interns.
